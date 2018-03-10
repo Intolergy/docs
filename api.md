@@ -4,9 +4,9 @@
 ## User
 
 + POST /api/signup
-  Description: Create new user,
-  Client: JSONObject ApiClient.login (JSONObject json),
-  Messages:
+  - Description: Create new user,
+  - Client: JSONObject ApiClient.login (JSONObject json),
+  - Messages:
     ```js
       Request {
         name: 'test',
@@ -22,9 +22,9 @@
     ```
 
 + POST /api/login
-  Description: log in user,
-  Client: JSONObject ApiClient.signup (JSONObject json),
-  Messages:
+  - Description: log in user,
+  - Client: JSONObject ApiClient.signup (JSONObject json),
+  - Messages:
     ```js
       Request {
         name: 'test',
@@ -38,9 +38,9 @@
     ```
 
 + POST /api/logout
-  Description: Log out user,
-  ApiClient: Not Implemented as it is not used yet,
-  Messages:
+  - Description: Log out user,
+  - ApiClient: Not Implemented as it is not used yet,
+  - Messages:
     ```js
       Request {}
       Response {
@@ -51,9 +51,9 @@
     ```
 
 + GET /api/user (admin)
-  Description: Get all users if you are logged and are an admin user,
-  ApiClient: Not implemented, only for debugging purposes,
-  Messages:
+  - Description: Get all users if you are logged and are an admin user,
+  - ApiClient: Not implemented, only for debugging purposes,
+  - Messages:
     ```js
       Response {
         error: false,
@@ -71,9 +71,9 @@
 ## Post
 
 + GET /api/post (auth)
-  Description: Get all posts (not paginated yet),
-  ApiClient: JSONObject getPosts (JSONObject queries),
-  Messages:
+  - Description: Get all posts (not paginated yet),
+  - ApiClient: JSONObject getPosts (JSONObject queries),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -89,9 +89,9 @@
     ```
 
 + POST /api/post (admin)
-  Description: create post,
-  ApiClient: JSONObject postPlace (JSONObject body),
-  Messages:
+  - Description: create post,
+  - ApiClient: JSONObject postPlace (JSONObject body),
+  - Messages:
     ```js
       Request {
         title: 'Titulo',
@@ -108,9 +108,9 @@
 ## Place
 
 + GET /api/place (auth),
-  Description: List all places (not paginated yet),
-  ApiClient: JSONObject getPlaces (JSONObject body),
-  Messages:
+  - Description: List all places (not paginated yet),
+  - ApiClient: JSONObject getPlaces (JSONObject body),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -127,9 +127,9 @@
     ```
 
 + POST /api/place (auth)
-  Description: Create place,
-  ApiClient: JSONObject postPlace (JSONObject body),
-  Messages:
+  - Description: Create place,
+  - ApiClient: JSONObject postPlace (JSONObject body),
+  - Messages:
     ```js
       Request {
         name: 'Restaurante',
@@ -149,9 +149,9 @@
 ## Product
 
 + GET /api/product (auth)
-  Description: List all products (not paginated yet),
-  ApiClient: JSONObject getProducts (JSONObject queries),
-  Messages:
+  - Description: List all products (not paginated yet),
+  - ApiClient: JSONObject getProducts (JSONObject queries),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -167,9 +167,9 @@
     ```
 
 + POST /api/product (auth)
-  Description: Create product,
-  ApiClient: JSONObject postProduct (JSONObject body),
-  Messages:
+  - Description: Create product,
+  - ApiClient: JSONObject postProduct (JSONObject body),
+  - Messages:
     ```js
       Request {
         name: 'Colacao',
@@ -188,9 +188,9 @@
 ## Vote
 
 + GET /api/vote/post/:id (auth)
-  Description: Get all votes for post with id == :id,
-  ApiClient: JSONObject getPostVotes (Integer id),
-  Messages:
+  - Description: Get all votes for post with id == :id,
+  - ApiClient: JSONObject getPostVotes (Integer id),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -203,9 +203,9 @@
     ```
 
 + GET /api/vote/place/:id (auth)
-  Description: Get all votes for place with id == :id,
-  ApiClient: JSONObject getPlaceVotes (Integer id),
-  Messages:
+  - Description: Get all votes for place with id == :id,
+  - ApiClient: JSONObject getPlaceVotes (Integer id),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -218,9 +218,9 @@
     ```
 
 + GET /api/vote/product/:id (auth)
-  Description: Get all votes for product with id =) :id,
-  ApiClient: JSONObject getProductVotes (Integer id),
-  Messages:
+  - Description: Get all votes for product with id =) :id,
+  - ApiClient: JSONObject getProductVotes (Integer id),
+  - Messages:
     ```js
       Response {
         error: false,
@@ -233,11 +233,11 @@
     ```
 
 + POST /api/vote (auth)
-  Description: Create/update vote of any type,
-  ApiClient: JSONObject postVote (String type, Integer id, Boolean value),
-    - type: 'place' || 'product' || 'post',
-    - value: true => 1 => positive, false => -1 => negative
-  Messages:
+  - Description: Create/update vote of any type,
+  - ApiClient: JSONObject postVote (String type, Integer id, Boolean value),
+    + type: 'place' || 'product' || 'post',
+    + value: true => 1 => positive, false => -1 => negative
+  - Messages:
     ```js
       Request {
         type: 'product' || 'place' || 'post',
