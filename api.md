@@ -246,3 +246,161 @@
       }
     ```
 
+## Carrefour
+
++ GET /api/product/carrefour?q=nutell
+  - Description: Endpoint to look for products in the carrefour api. The query params is 'q'.
+  - ApiClient: Not yet implemented
+  - Messages:
+    ```js
+      Response {
+        error: false,
+        code: 200,
+        data: [{
+          "gtin": "8000500082379",
+          "brand": "NUTELLA",
+          "capacity_factor": 1,
+          "capacity_unit": "KG",
+          "capacity_volume": 1,
+          "category_structures": {
+            "hyper": {
+              "hypUbDesc": "PATE A TARTINER > 500G",
+              "hypClassDesc": "PATES A TARTINER",
+              "hypUbKey": "1404002",
+              "hypGrpClassKey": "140",
+              "hypSectorDesc": "PGC",
+              "hypDepartmentDesc": "EPICERIE",
+              "hypSectorKey": "1",
+              "hypSubClassDesc": "PATE A TARTINER",
+              "hypGrpClassDesc": "PDTS POUR PETITS DEJEUNERS",
+              "hypDepartmentKey": "14",
+              "hypClassKey": "1404",
+              "hypSubClassKey": "14040"
+            },
+            "proxy": {
+              "prxShoDepartmentDesc": "EPICERIE",
+              "prxShoDepartmentKey": "01",
+              "prxSubClassDesc": "PATE A TARTINER",
+              "prxShoSectorKey": "01",
+              "prxGrpClassKey": "027",
+              "prxHahSectorDesc": "EPICERIE",
+              "prxClassKey": "232",
+              "prxHahDepartmentKey": "01",
+              "prxUbDesc": "PATE A TARTINER NOISET.>500G",
+              "prxSubClassKey": "232006",
+              "prxGrpClassDesc": "CONFITURE/P.A.T./MIEL",
+              "prxClassDesc": "CONFIT. PATES A TARTINER MIEL",
+              "prxUbKey": "23200632",
+              "prxHahDepartmentDesc": "EPICERIE",
+              "prxShoSectorDesc": "P. G. C.",
+              "prxHahSectorKey": "01"
+            },
+            "super": {
+              "supDepartmentKey": "01",
+              "supSubClassKey": "120005",
+              "supSectorKey": "1",
+              "supClassKey": "120",
+              "supSectorDesc": "DENREES NON PERISSABLES",
+              "supGrpClassDesc": "CONFITURES",
+              "supClassDesc": "CONFITURES",
+              "supSubClassDesc": "PATES A TARTINER",
+              "supUbKey": "12000501",
+              "supDepartmentDesc": "EPICERIE",
+              "supGrpClassKey": "120",
+              "supUbDesc": "PATES A TARTINER"
+            }
+          },
+          "description": "POT 1KG NUTELLA SLEEVE NOEL",
+          "name": "NUTELLA SLEEVE"
+        }]
+      }
+    ```
+
++ GET /api/product/carrefour/:gtin
+  + Description: Retrive a product of the carrefour database by gtin,
+  + ApiClient: Not yet implemented,
+  + Messages:
+    ```js
+      Response {
+        error: false,
+        code: 200,
+        data: {
+          "gtin": [
+            "8000500082379"
+          ],
+          "brand": [
+            "NUTELLA"
+          ],
+          "description": [
+            "POT 1KG NUTELLA SLEEVE NOEL"
+          ],
+          "name": [
+            "NUTELLA SLEEVE"
+          ],
+          "capacity_factor": [
+            1
+          ],
+          "capacity_unit": [
+            "KG"
+          ],
+          "capacity_volume": [
+            1
+          ],
+          "category_structures": {
+            "hyper": [
+              {
+                "hypUbDesc": "PATE A TARTINER > 500G",
+                "hypClassDesc": "PATES A TARTINER",
+                "hypUbKey": "1404002",
+                "hypGrpClassKey": "140",
+                "hypSectorDesc": "PGC",
+                "hypDepartmentDesc": "EPICERIE",
+                "hypSectorKey": "1",
+                "hypSubClassDesc": "PATE A TARTINER",
+                "hypGrpClassDesc": "PDTS POUR PETITS DEJEUNERS",
+                "hypDepartmentKey": "14",
+                "hypClassKey": "1404",
+                "hypSubClassKey": "14040"
+              }
+            ],
+            "super": [
+              {
+                "supDepartmentKey": "01",
+                "supSubClassKey": "120005",
+                "supSectorKey": "1",
+                "supClassKey": "120",
+                "supSectorDesc": "DENREES NON PERISSABLES",
+                "supGrpClassDesc": "CONFITURES",
+                "supClassDesc": "CONFITURES",
+                "supSubClassDesc": "PATES A TARTINER",
+                "supUbKey": "12000501",
+                "supDepartmentDesc": "EPICERIE",
+                "supGrpClassKey": "120",
+                "supUbDesc": "PATES A TARTINER"
+              }
+            ],
+            "proxy": [
+              {
+                "prxShoDepartmentDesc": "EPICERIE",
+                "prxShoDepartmentKey": "01",
+                "prxSubClassDesc": "PATE A TARTINER",
+                "prxShoSectorKey": "01",
+                "prxGrpClassKey": "027",
+                "prxHahSectorDesc": "EPICERIE",
+                "prxClassKey": "232",
+                "prxHahDepartmentKey": "01",
+                "prxUbDesc": "PATE A TARTINER NOISET.>500G",
+                "prxSubClassKey": "232006",
+                "prxGrpClassDesc": "CONFITURE/P.A.T./MIEL",
+                "prxClassDesc": "CONFIT. PATES A TARTINER MIEL",
+                "prxUbKey": "23200632",
+                "prxHahDepartmentDesc": "EPICERIE",
+                "prxShoSectorDesc": "P. G. C.",
+                "prxHahSectorKey": "01"
+              }
+            ]
+          }
+        }
+      }
+    ```
+
